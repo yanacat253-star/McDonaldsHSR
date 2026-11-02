@@ -1,0 +1,166 @@
+/* ===== Загальні стилі ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #e9ecf3;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+}
+
+a { color: #2b3a67; }
+a:hover { color: #c0392b; }
+
+/* ===== Каркас сторінки ===== */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #b5bccf;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ===== Верхній колонтитул ===== */
+.site-header {
+  padding: 18px 24px 0 24px;
+  background-color: #2b3a67;
+  color: #ffffff;
+}
+
+.site-title {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+}
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.menu-link:hover {
+  background-color: #3f5191;
+}
+
+.menu-link:active {
+  background-color: #c0392b;
+}
+
+.menu-link.current {
+  background-color: #ffffff;
+  color: #2b3a67;
+  font-weight: bold;
+}
+
+/* ===== Основна область: бокова колонка + вміст ===== */
+.layout { display: flex; }
+
+.sidebar {
+  width: 230px;
+  padding: 18px;
+  background-color: #eef1fa;
+  border-right: 1px solid #b5bccf;
+}
+
+.sidebar-box {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border-left: 4px solid #c0392b;
+  border-radius: 4px;
+}
+
+.sidebar-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #2b3a67;
+}
+
+.sidebar-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.content {
+  flex: 1;
+  padding: 18px 28px;
+}
+
+.page-title {
+  margin-top: 0;
+  color: #2b3a67;
+  border-bottom: 2px solid #c0392b;
+  padding-bottom: 8px;
+}
+
+.section-title { color: #2b3a67; }
+
+/* ===== Зображення ===== */
+.banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border-radius: 8px;
+}
+
+/* ===== Списки ===== */
+.info-list li { margin-bottom: 6px; }
+
+/* ===== Таблиці ===== */
+.data-table {
+  width: 100%;
+  margin: 12px 0;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 12px;
+  border: 1px solid #b5bccf;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #2b3a67;
+  color: #ffffff;
+}
+
+.data-table tbody tr:nth-child(even) { background-color: #f3f5fb; }
+.data-table tbody tr:hover { background-color: #fde8e5; }
+
+/* ===== Нижній колонтитул ===== */
+.site-footer {
+  padding: 14px 24px;
+  background-color: #2b3a67;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.site-footer p { margin: 0; }
+
+/* ===== Адаптивність для вузьких екранів ===== */
+@media (max-width: 700px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #b5bccf;
+  }
+}
